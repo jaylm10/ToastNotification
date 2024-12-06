@@ -1,0 +1,89 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body,html{
+    height: fit-content;
+    width: 100%;
+    background: #d4d2a5;
+    background-image: linear-gradient(
+        to right,
+        #f1bebe 0%,
+        #f3d87f 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.box{
+    display: flex;
+    gap: 20px;
+}
+
+.box button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit{
+    background-color: lightgreen;
+}
+.failed{
+    background-color: #e74c3c;
+}
+
+.info{
+    background-color: lightskyblue;
+}
+.warning{
+    background-color: #f3d87f;
+}
+
+.notifi {
+    position: fixed; 
+    top: 30px;
+    right: 30px;
+    background-color: #32de84;
+    padding: 13px 35px;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    transform: translateX(10px); /* Slide effect */
+}
+
+.notifi.active {
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Enable interaction */
+    transform: translateX(0); /* Reset slide effect */
+}
+
+
+@media(max-width:450px){
+    .box{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+  
+}
+
+@media(max-width:550px){
+    .notifi{
+        padding: 8px 28px;
+    }
+
+
+}
