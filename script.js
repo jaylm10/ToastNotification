@@ -9,4 +9,27 @@ function notification() {
         notifi.classList.remove("active");
     }, 2000);
 }
-  
+
+document.getElementsByClassName("failed")[0].addEventListener("click",()=>{
+
+    const notifi = document.getElementsByClassName("notifi")[0];
+
+    notifi.textContent=`Article Failed Succesfully`
+
+})
+
+document.getElementsByClassName("info")[0].addEventListener("click",()=>{
+
+    const notifi = document.getElementsByClassName("notifi")[0];
+
+    notifi.textContent=`Information updated`
+
+})
+
+document.getElementsByClassName("warning")[0].addEventListener("click",()=>{
+
+    const notifi = document.getElementsByClassName("notifi")[0];
+
+    notifi.textContent=`Warning.....`
+
+})
